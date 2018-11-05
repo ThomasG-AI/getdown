@@ -25,8 +25,8 @@ The main design and operation of Getdown is detailed on the
 Getdown was originally written by developers at [OOO] for the deployment of their Java-based
 massively multiplayer games. Try out any of the following games to see it in action:
 
-  * [Puzzle Pirates](http://www.puzzlepirates.com/) - OOO
-  * [Spiral Knights](http://spiralknights.com) - OOO
+  * [Puzzle Pirates](https://www.puzzlepirates.com/) - OOO
+  * [Spiral Knights](https://www.spiralknights.com/) - OOO
 
 Getdown is implemented in Java, but certainly can be used to deploy non-Java-based applications.
 Doing so would be a little crazy since you may have to install a JVM on the user's machine (if they
@@ -42,23 +42,33 @@ See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## Obtaining Getdown
 
-The latest version of Getdown can be obtained thusly:
+Getdown will likely need to be integrated into your build, for which we have
+[separate instructions](https://github.com/threerings/getdown/wiki/Build-Integration). You can
+also download the individual jar files from Maven Central if needed:
 
-  * Download the pre-built jar file from Maven Central:
-    [getdown-1.7.0.jar](http://repo2.maven.org/maven2/com/threerings/getdown/1.7.0/getdown-1.7.0.jar)
-  * Obtain the jar artifact via Maven with the following identifier: `com.threerings:getdown:1.7.0`.
-  * [Check out the code](https://github.com/threerings/getdown) and build it yourself.
+  * In [this Maven Central directory](http://repo2.maven.org/maven2/com/threerings/getdown) you can
+    find the latest versions of `getdown-launcher.jar` (the code that updates and launches your
+    app), `getdown-ant.jar` (build integration for the Ant build tool, and which can also be used
+    with Maven), and `getdown-core.jar` (the core updating and launching logic which you don't
+    usually use directly, unless you're embedding Getdown in your app).
 
 You can also:
 
-  * View the [javadoc documentation] online.
+  * [Check out the code](https://github.com/threerings/getdown) and build it yourself.
   * Browse the [source code] online.
+  * View the [javadoc documentation] online.
 
 ## JVM Version Requirements
 
-  * Getdown version 1.7.x (not yet released) requires Java 7 VM or newer.
+  * Getdown version 1.8.x requires Java 7 VM or newer.
+  * Getdown version 1.7.x requires Java 7 VM or newer.
   * Getdown version 1.6.x requires Java 6 VM or newer.
   * Getdown version 1.5 and earlier requires Java 5 VM or newer.
+
+## Migrating from Getdown 1.7 to Getdown 1.8
+
+See [this document](https://github.com/threerings/getdown/wiki/Migrate17to18) on the changes needed
+to migrate from Getdown 1.7 to 1.8.
 
 ## Building
 
